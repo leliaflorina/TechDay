@@ -1,0 +1,46 @@
+.ng-sidebar {
+      background-color: #e8e8e8 ;
+      overflow: auto;
+      pointer-events: auto;
+      position: fixed;
+      touch-action: auto;
+      will-change: initial;
+      z-index: 99999999;      
+    }
+      .ng-sidebar--left {
+        bottom: 0;
+        left: auto;
+        top: 100px;
+        width:250px;
+        transition: 0.5s;
+        will-change: transform;
+      }
+      .ng-sidebar--right {
+        bottom: 0;
+        right: 0;
+        top: 0;
+      }
+      .ng-sidebar--top {
+        left: 0;
+        right: 0;
+        top: 0;
+      }
+      .ng-sidebar--bottom {
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    .ng-sidebar--inert {
+      pointer-events: auto;
+      touch-action: auto;
+      will-change: transform;
+       width: 15px;
+       transition: 0.5s;
+       padding-top: 100px;
+    }
+    .ng-sidebar--animate.ng-sidebar {
+      -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+      transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+    }
+
+  

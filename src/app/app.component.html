@@ -1,0 +1,48 @@
+<div>
+  <!-- Home -->
+  <div class="dark-blue ">
+    <span style="color:white; margin-left:15px;"><h1>Welcome </h1></span>
+  </div>
+
+  <!-- Content -->
+  <div class="container-fluid no-jumping-scroll">
+
+
+    <div class="container sidebar__content ">
+
+      <side-bar [(opened)]="_opened" [mode]="push" [position]="_POSITIONS[0]" (onOpenStart)="_onOpenStart()" (onOpened)="_onOpened()"
+        (onCloseStart)="_onCloseStart()" (onClosed)="_onClosed()">
+         <p class="pull-right" style="height:100%">
+          <a role=button (click)="_toggleOpened()" style=" margin-right: 6px; vertical-align: middle;" class="fa fa-angle-{{_opened?'double-left':'double-right'}} pull-right">    
+            </a>
+            </p>
+        <div style="padding:1px 1px 1px 18px;">
+         
+          <p>Sidebar contents</p>
+
+          <label>Write text in sidebar</label>
+          <input [(ngModel)]="newItem" />
+          <button class="demo-control" (click)="addName()">Add item</button>
+          <br><br>
+          <button class="demo-control" (click)="_toggleOpened()">Close sidebar</button>
+          <p><a closeSidebar>This will close the sidebar too</a></p>
+        </div>
+      </side-bar>
+
+      <div class="{{_opened ?'sidebar_push':'sidebar_static'}}">
+        <header>
+          <button (click)="_toggleOpened()" class="demo-header__toggle"><span class="fa-bars" ></span> Open sidebar</button>
+        </header>
+        <div class="demo-contents">
+
+          <h2>Sidebar</h2>
+
+          <ul *ngFor="let task of listOfTasks">
+            <li>{{task}}</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

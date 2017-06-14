@@ -1,0 +1,27 @@
+.dark-blue {
+    background-color: #1d3751;
+    height: 100px;
+    
+}
+body {
+    margin: 0px !important;
+}
+
+.container-fluid {
+    width:1180px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+ .sidebar__content {
+      display: block;
+      height: 100%;     
+    }
+    .sidebar_push{
+     padding:0px 0px 0px 250px;
+       transition: 0.5s;
+    }
+    .sidebar_static{
+         padding:0px 0px 0px 15px;
+    }

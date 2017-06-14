@@ -1,0 +1,13 @@
+ <aside #sidebar
+      role="complementary"
+      [attr.aria-hidden]="!opened"
+      [attr.aria-label]="ariaLabel"
+      class="ng-sidebar ng-sidebar--{{opened ? 'opened' : 'closed'}} ng-sidebar--{{position}} ng-sidebar--{{mode}}"
+      [class.ng-sidebar--docked]="_isDocked"
+      [class.ng-sidebar--inert]="_isInert"
+      [class.ng-sidebar--animate]="animate"
+      [ngClass]="sidebarClass"
+      [ngStyle]="_getStyle()"
+      >
+      <ng-content></ng-content>
+    </aside>
